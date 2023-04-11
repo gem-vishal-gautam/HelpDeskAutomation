@@ -2,13 +2,16 @@ package com.qa.helpdesk.stepDefinitions;
 
 import com.gemini.generic.reporting.GemTestReporter;
 import com.gemini.generic.reporting.STATUS;
+import com.gemini.generic.ui.utils.DriverManager;
 import com.qa.helpdesk.locators.SignInLocators;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import com.gemini.generic.ui.utils.DriverAction;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.java.ro.Si;
 import org.apache.commons.codec.binary.Base64;
+import org.openqa.selenium.JavascriptExecutor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.qa.helpdesk.genericUtils.Utils;
@@ -32,7 +35,7 @@ public class LogIn extends Utils {
             DriverAction.waitSec(3);
             DriverAction.typeText(SignInLocators.typeEmail, email, "Email");
             DriverAction.click(SignInLocators.nextBtn, "Next Button");
-            DriverAction.waitSec(2);
+            DriverAction.waitSec(3);
             byte[] decodingString = Base64.decodeBase64(pass);
             String passwordDecoded = new String(decodingString);
             DriverAction.typeText(SignInLocators.typePassword, passwordDecoded, "Password");
@@ -45,7 +48,10 @@ public class LogIn extends Utils {
     @And("^User clicks on signIn Button$")
     public void clickSignInButton() {
         try {
-            DriverAction.click(SignInLocators.signIn, "Sign-In Button");
+            DriverAction.waitSec(2);
+            JavascriptExecutor js = (JavascriptExecutor) DriverManager.getWebDriver();
+            js.executeScript("arguments[0].click();", DriverManager.getWebDriver().findElement(SignInLocators.signIn));
+//            DriverAction.click(SignInLocators.signIn, "Sign-In Button");
             DriverAction.waitSec(5);
             DriverAction.click(SignInLocators.NoBtn, "No Button");
             DriverAction.waitSec(5);
