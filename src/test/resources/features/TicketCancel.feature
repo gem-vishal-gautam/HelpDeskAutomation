@@ -7,7 +7,6 @@ Feature: Ticket Cancellation Automation
     And User clicks on signIn Button
     And User switches to Employee View
 
-
   Scenario Outline: HelpDesk, Verify Ticket Cancellation - Incident Type
     Given User clicks on New Ticket Button
     When User Creates an Incident Ticket, fills the Subject - <Subject>, Description - <Description>, and Department - <Department>
