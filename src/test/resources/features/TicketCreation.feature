@@ -50,7 +50,7 @@ Feature: Ticket Creation Automation
   Scenario Outline: HelpDesk, Verify Ticket Creation - Request Type
     Given User clicks on New Ticket Button
     When User Creates a Request Ticket, fills the Subject - <Subject>, Description - <Description>, Department - <Department>, Category - <Category>, and Sub-category - <Sub-category>
-    Then User verifies the Request Ticket with Subject - <Subject>, Description - <Description>, Department - <Department>,, Category - <Category>, and Sub-category - <Sub-category>
+    Then User verifies the Request Ticket with Subject - <Subject>, Description - <Description>, Department - <Department>, Category - <Category>, and Sub-category - <Sub-category>
     And User clicks on Submit button
     And User clicks on Continue button
     And The user obtains the newly created Ticked ID and searches it
@@ -92,7 +92,7 @@ Feature: Ticket Creation Automation
     Given User clicks on New Ticket Button
     When User Creates a Request Ticket, fills the Subject - <Subject>, Description - <Description>, Department - <Department>, Category - <Category>, and Sub-category - <Sub-category>
     And User uploads the File - <uploadFile>
-    Then User verifies the Request Ticket with Subject - <Subject>, Description - <Description>, Department - <Department>,, Category - <Category>, and Sub-category - <Sub-category>
+    Then User verifies the Request Ticket with Subject - <Subject>, Description - <Description>, Department - <Department>, Category - <Category>, and Sub-category - <Sub-category>
     Then User verifies the file upload
     And User clicks on Submit button
     And User clicks on Continue button
