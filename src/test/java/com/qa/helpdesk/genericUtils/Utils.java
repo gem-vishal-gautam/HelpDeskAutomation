@@ -402,11 +402,11 @@ public class Utils {
 
     public void switchesToEmployeeView() {
         try {
-            DriverAction.waitSec(4);
+            DriverAction.waitSec(5);
             DriverAction.click(SignInLocators.supportView, "Support View");
-            DriverAction.waitSec(4);
+            DriverAction.waitSec(5);
             DriverAction.click(SignInLocators.employeeView, "Employee View");
-            DriverAction.waitSec(2);
+            DriverAction.waitSec(3);
         } catch (Exception e) {
             logger.info("Exception occurred!", e);
             GemTestReporter.addTestStep("ERROR", "Exception occurred :" + e.getMessage(), STATUS.FAIL, DriverAction.takeSnapShot());

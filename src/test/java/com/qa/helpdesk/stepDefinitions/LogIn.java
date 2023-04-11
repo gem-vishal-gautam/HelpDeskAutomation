@@ -49,9 +49,9 @@ public class LogIn extends Utils {
     public void clickSignInButton() {
         try {
             DriverAction.waitSec(2);
-            JavascriptExecutor js = (JavascriptExecutor) DriverManager.getWebDriver();
-            js.executeScript("arguments[0].click();", DriverManager.getWebDriver().findElement(SignInLocators.signIn));
-//            DriverAction.click(SignInLocators.signIn, "Sign-In Button");
+//            JavascriptExecutor js = (JavascriptExecutor) DriverManager.getWebDriver();
+//            js.executeScript("arguments[0].click();", DriverManager.getWebDriver().findElement(SignInLocators.signIn));
+            DriverAction.click(SignInLocators.signIn, "Sign-In Button");
             DriverAction.waitSec(5);
             DriverAction.click(SignInLocators.NoBtn, "No Button");
             DriverAction.waitSec(5);
