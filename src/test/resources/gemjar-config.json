@@ -1,0 +1,21 @@
+{
+  "environment": "dev",
+  "project_name": "HELPDESK",
+  "report_name": "HelpDeskTestReport",
+  "tags": "@regression",
+  "glueCode": "com.qa.helpdesk",
+  "feature": "src/test/resources/Features/",
+  "jewel_user1": "v1shal",
+  "email_report": "n",
+  "email_to": "vishal.gautam@geminisolutions.com",
+  "email_cc": "",
+  "email_bcc": "",
+  "enter_point": "https://apis.gemecosystem.com/enter-point",
+  "gemjarSubID": "test_id",
+  "dev": {
+    "browserName": "chrome",
+    "launchUrl": "https://helpdeskui-np.geminisolutions.com/#",
+    "browserTimeout": 100
+  }
+}
+
